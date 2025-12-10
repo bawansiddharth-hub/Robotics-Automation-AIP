@@ -18,21 +18,7 @@ def in_bounds(pos: Position, rows: int, cols: int) -> bool:
     return 0 <= r < rows and 0 <= c < cols
 
 
-def user_input_grid():
-    print("=== GRID SETUP ===")
-    while True:
-        try:
-            rows = int(input("Enter number of rows (>1): "))
-            cols = int(input("Enter number of columns (>1): "))
-            if rows < 2 or cols < 2:
-                print("Rows and columns must be >= 2.")
-                continue
-            break
-        except:
-            print("Invalid number. Try again.")
 
-    grid = np.zeros((rows, cols), dtype=int)
-    print("\nEnter grid row by row (0 = free, 1 = obstacle).")
 
     for r in range(rows):
         while True:
